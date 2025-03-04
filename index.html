@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Rajeev's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+                <span>Rajeev Joshi</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="#home">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="#about">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="#skills">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="#Projects">Projects</a></div>
+                <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="#Contact">Contact</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="">Home</a>
+                <a href="">About</a>
+                <a href="">Skills</a>
+                <a href="">Contact</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="nav-line"></div>
+
+
+    <section id="home">
+            <div class="main-container">
+                <div class="image" data-aos="zoom-in-right" data-aos-duration="2500">
+                    <img src="images/main.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">Hey I'm <span>Rajeev</span></h1>
+                    <div class="typewriter" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900"><h2>I 'm a <span id="typing-text"></span></h2></div>
+                    <div><h2>Tech enthusiast, problem solver, and passionate about building innovative solutions.</h2><h3>Let's Connect</h3></div>
+                    <div class="social-links" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1200">
+                        <a href="https://github.com/22-rajeev" ><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="mailto:rajeev22joshi@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+    </section>
+
+
+    <section id="about">
+        <div class="abt">
+            <div class="abtimage" data-aos="zoom-in-right" data-aos-duration="2500">
+                <img src="images/In the Soft Glow of a New Day.jpg" alt="Rajeev's Image">
+            </div>
+    
+            <div class="abt-content" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1000">
+                <h1>Hey there!</h1>
+                <p>I’m Rajeev, a passionate Machine Learning & AI enthusiast with a strong interest in building 
+                   intelligent systems and solving real-world problems using data. 
+                   I love exploring new algorithms, working on full-stack ML projects, 
+                   and continuously improving my skills in Flask, JavaScript, HTML, and CSS.
+                   With hands-on experience in developing and deploying applications, 
+                   I enjoy crafting efficient solutions that bridge the gap between AI and web development.
+                </p>
+            </div>
+        </div>
+
+
+
+        <section id="skills">
+            <div class="skills">
+                <div class="skillshead">
+                    <h1>My Tech Stack</h1>
+                    <h3>The Technologies that I work upon are</h3>
+                </div>
+                <div class="skillimg"> <!-- Grid container -->
+                    <img src="images/C++ (CPlusPlus).png" alt="">
+                    <img src="images/Python Icon.png" alt="">
+                    <img src="images/JavaScript.png" alt="">
+                    <img src="images/Flask.png" alt="">
+                    <img src="images/scikit-learn.png" alt="">
+                    <img src="images/Pandas.png" alt="">
+                    <img src="images/Matplotlib.png" alt="">
+                    <img src="images/mysql.png" alt="">
+                    <img src="images/git-logo-png_seeklogo-273180.png" alt="">
+                    <img src="images/postman-api-platform6643.logowik.com.webp" alt="">
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section id="Projects">
+
+
+            <div class="project"><h1>Projects</h1></div>
+            <div><span id="typing-text2"></span></div>
+
+
+
+        </section>
+
+
+
+        <section id="Contact">
+
+
+            <div class="contactme-main"> 
+                <div class="contact-para"><h1>Let's Connect</h1><p>I am actively looking for job and internship opportunities in Machine Learning and AI, 
+                                        where I can apply my skills in data-driven problem-solving and full-stack development. 
+                                    I am eager to collaborate on innovative projects, contribute to impactful solutions, and grow as a 
+                                    professional. Feel free to reach out to discuss opportunities!</p>
+                </div>
+
+                <div class="contact-form">
+                    <form action="/submit" method="POST">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="email@example.com" required>
+                
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+                
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="social-linksend2" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1200">
+                <a href="https://github.com/22-rajeev"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:rajeev22joshi@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+
+
+        </section>
+
+        <div class="bottom-bar">
+            Made By Rajeev © 
+        </div>
+
+
+
+
+
+
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init({offset:0});
+        </script>
+        <script>
+            function hamburg(){
+                const navbar = document.querySelector(".dropdown")
+                navbar.style.transform = "translateY(0px)"
+            }
+            function cancel(){
+                const navbar = document.querySelector(".dropdown")
+                navbar.style.transform = "translateY(-500px)"
+            }
+            var typed = new Typed("#typing-text", {
+            strings: ["Python Developer", "ML Enthusiast", "Learner"],
+            typeSpeed: 100, 
+            backSpeed: 50,
+            backDelay: 800,  
+            loop: true   
+            });
+            var typed = new Typed("#typing-text2", {
+            strings: ["Adding up my projects soon ! ! !"],
+            typeSpeed: 20,
+            backSpeed: 70,
+            backDelay: 500,  
+            loop: true   
+            });
+        </script>
+</body>
+</html>
