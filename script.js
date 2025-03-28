@@ -26,10 +26,11 @@ window.addEventListener("scroll", function () {
         // Scrolling down
         logo.style.opacity = "0";
         logo.style.pointerEvents = "none"; // Prevents interaction
-    } else if (scrollTop < lastScrollTop - 20 || scrollTop <= 10) {
-        // Scrolling up significantly or reaching top
+    } else if (scrollTop < lastScrollTop - 20 || scrollTop === 0) {
+        // Scrolling up significantly or reaching the top
         logo.style.opacity = "1";
         logo.style.pointerEvents = "auto";
     }
-    lastScrollTop = scrollTop;
+    
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Prevents negative values
 });
