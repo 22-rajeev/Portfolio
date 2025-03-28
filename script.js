@@ -26,8 +26,8 @@ window.addEventListener("scroll", function () {
         // Scrolling down
         logo.style.opacity = "0";
         logo.style.pointerEvents = "none"; // Prevents interaction
-    } else {
-        // Scrolling up
+    } else if (scrollTop < lastScrollTop - 20 || scrollTop <= 10) {
+        // Scrolling up significantly or reaching top
         logo.style.opacity = "1";
         logo.style.pointerEvents = "auto";
     }
