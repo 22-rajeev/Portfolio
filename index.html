@@ -12,7 +12,7 @@
 <body>
     <nav>
         <div class="nav-container">
-            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+            <div class="logo" data-aos="fade-right" data-aos-duration="1000">
                 <span>Rajeev Joshi</span>
             </div>
             <div class="links">
@@ -52,7 +52,7 @@
                     <div class="social-links" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1200">
                        <a href="#Contact"><button class="connect-btn">Let's Connect</button></a> 
                         <a href="https://github.com/22-rajeev" ><i class="fa-brands fa-github"></i></a>
-                        <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/in/rajeev-joshi-bcs"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="mailto:rajeev22joshi@gmail.com"><i class="fa-solid fa-envelope"></i></a>
                     </div>
     </section>
@@ -84,16 +84,16 @@
                 <h3>The Technologies that I work upon are</h3>
             </div>
             <div class="skillimg"> 
-                <img src="images/C++ (CPlusPlus).png" alt="" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                <img src="images/C++ (CPlusPlus).png" alt="" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
                 <img src="images/Python Icon.png" alt="" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300">
-                <img src="images/JavaScript.png" alt="" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
+                <img src="images/JavaScript.png" alt="" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
                 <img src="images/Flask.png" alt="" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="300">
-                <img src="images/scikit-learn.png" alt="" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
-                <img src="images/Pandas.png" alt="" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
-                <img src="images/Matplotlib.png" alt="" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300">
-                <img src="images/mysql.png" alt="" data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="300">
-                <img src="images/git-logo-png_seeklogo-273180.png" alt="" data-aos="flip-right" data-aos-duration="1000" data-aos-delay="300">
-                <img src="images/postman-api-platform6643.logowik.com.webp" alt="" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                <img src="images/scikit-learn.png" alt="" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300">
+                <img src="images/Pandas.png" alt="" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
+                <img src="images/Matplotlib.png" alt="" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+                <img src="images/mysql.png" alt="" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300">
+                <img src="images/git-logo-png_seeklogo-273180.png" alt="" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
+                <img src="images/postman-api-platform6643.logowik.com.webp" alt="" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
             </div>
         </div>
     </section>
@@ -149,7 +149,7 @@
 
         <div class="social-linksend2" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="300">
             <a href="https://github.com/22-rajeev"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/rajeev-joshi-bcs"><i class="fa-brands fa-linkedin"></i></a>
             <a href="mailto:rajeev22joshi@gmail.com"><i class="fa-solid fa-envelope"></i></a>
         </div>
             </div>
@@ -180,31 +180,9 @@
 
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
-          AOS.init({offset:0});
+          AOS.init({ offset: 0 });
         </script>
-        <script>
-            function hamburg(){
-                const navbar = document.querySelector(".dropdown")
-                navbar.style.transform = "translateY(0px)"
-            }
-            function cancel(){
-                const navbar = document.querySelector(".dropdown")
-                navbar.style.transform = "translateY(-500px)"
-            }
-            var typed = new Typed("#typing-text", {
-            strings: ["Python Developer", "ML Enthusiast", "Learner"],
-            typeSpeed: 100, 
-            backSpeed: 50,
-            backDelay: 800,  
-            loop: true   
-            });
-            var typed = new Typed("#typing-text2", {
-            strings: ["Adding up my projects soon ! ! !"],
-            typeSpeed: 20,
-            backSpeed: 70,
-            backDelay: 500,  
-            loop: true   
-            });
-        </script>
+        <script src="script.js"></script> 
+        </body>
 </body>
 </html>
