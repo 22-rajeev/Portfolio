@@ -854,3 +854,24 @@ nav {
     font-size: 1rem;
     transition: bottom 0.3s ease-in-out; /* Smooth transition */
 }
+#successMessage {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(254, 215, 173);
+    color:rgb(109, 67, 0);
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, -20px); }
+    to { opacity: 1; transform: translate(-50%, 0); }
+}
