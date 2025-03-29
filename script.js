@@ -34,3 +34,26 @@ window.addEventListener("scroll", function () {
     
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Prevents negative values
 });
+document.getElementById("contactForm").addEventListener("submit", async function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    let formData = new FormData(this);
+
+    let response = await fetch(this.action, {
+        method: "POST",
+        body: formData
+    });
+
+    let result = await response.json();
+
+    if (result.success) {
+        let successMessage = document.getElementById("successMessage");
+        successMessage.style.display = "block"; // Show success message
+
+        this.reset(); // Reset the form
+
+        setTimeout(() => {
+            successMessage.style.display = "none"; // Hide after 3 seconds
+        }, 3000);
+    }
+});
