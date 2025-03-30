@@ -607,33 +607,62 @@ nav {
 }
 
 .project-card {
-    background: white;
-    padding: 15px;
+    position: relative;
+    overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .project-card img {
     width: 100%;
-    height: auto;
+    display: block;
     border-radius: 10px;
 }
 
-.project-card h3 {
-    font-size: 1.5rem;
-    margin: 10px 0;
-}
-
+.project-card h3, 
 .project-card p {
-    font-size: 1rem;
-    color: #555;
+    text-align: center;
+    padding: 10px;
 }
 
-/* Hover Effects */
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+.project-links {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-links {
+    opacity: 1;
+}
+
+.project-links a {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.project-links a:hover {
+    background-color: #007bff;
 }
 
 /* Responsive */
@@ -646,7 +675,7 @@ nav {
 @media (max-width: 768px) 
 {
     .project-grid {
-        grid-template-columns: repeat(2, 1fr); /* 1 column on mobile */
+        grid-template-columns: repeat(1, 1fr); /* 1 column on mobile */
     }
     .project-title h1
     {
