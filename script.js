@@ -7,6 +7,7 @@ function cancel() {
     const navbar = document.querySelector(".dropdown");
     navbar.style.transform = "translateY(-500px)";
 }
+
 var typed = new Typed("#typing-text", {
     strings: ["Python Developer", "ML Enthusiast", "Learner"],
     typeSpeed: 100,
@@ -25,16 +26,16 @@ window.addEventListener("scroll", function () {
         // Scrolling down
         logo.style.opacity = "0";
         logo.style.pointerEvents = "none"; // Prevents interaction
-    } else if (scrollTop < lastScrollTop - 20 || scrollTop === 0) {
-        // Scrolling up significantly or reaching the top
+    } else {
+        // Scrolling up
         logo.style.opacity = "1";
         logo.style.pointerEvents = "auto";
     }
-    
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Prevents negative values
+    lastScrollTop = scrollTop;
 });
+
 document.getElementById("contactForm").addEventListener("submit", async function(event) {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault(); 
 
     let formData = new FormData(this);
 
@@ -47,12 +48,12 @@ document.getElementById("contactForm").addEventListener("submit", async function
 
     if (result.success) {
         let successMessage = document.getElementById("successMessage");
-        successMessage.style.display = "block"; // Show success message
+        successMessage.style.display = "block"; 
 
-        this.reset(); // Reset the form
+        this.reset(); 
 
         setTimeout(() => {
-            successMessage.style.display = "none"; // Hide after 3 seconds
+            successMessage.style.display = "none"; 
         }, 3000);
     }
 });
