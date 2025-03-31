@@ -30,15 +30,16 @@ const logo = document.querySelector(".logo");
 window.addEventListener("scroll", function () {
     let scrollTop = window.scrollY || document.documentElement.scrollTop;
 
-    if (scrollTop > lastScrollTop) {
-        // Scrolling down
+    if (scrollTop > 50) {  
+        // If scrolled more than 50px, hide logo completely
         logo.style.opacity = "0";
-        logo.style.pointerEvents = "none"; // Prevents interaction
-    } else {
-        // Scrolling up
+        logo.style.pointerEvents = "none"; 
+    } else {  
+        // If back at the top, show logo again
         logo.style.opacity = "1";
         logo.style.pointerEvents = "auto";
     }
+
     lastScrollTop = scrollTop;
 });
 
