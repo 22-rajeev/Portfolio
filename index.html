@@ -132,17 +132,20 @@
 
 
         <div class="contactme-main"> 
-            <div class="contact-para"><h1>Let's Connect</h1><p>I am actively looking for job and internship opportunities in Machine Learning and AI, 
-                                    where I can apply my skills in data-driven problem-solving and full-stack development. 
-                                I am eager to collaborate on innovative projects, contribute to impactful solutions, and grow as a 
-                                professional. Feel free to reach out to discuss opportunities!</p>
-
-
-        <div class="social-linksend2" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="300">
-            <a href="https://github.com/22-rajeev"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/rajeev-joshi-bcs"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="mailto:rajeev22joshi@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-        </div>
+            <div class="contact-para">
+                <h1>Let's Connect</h1>
+                        <p>I am actively looking for job and internship opportunities in Machine Learning and AI, 
+                            where I can apply my skills in data-driven problem-solving and full-stack development. 
+                            I am eager to collaborate on innovative projects, contribute to impactful solutions, and grow as a 
+                            professional. Feel free to reach out to discuss opportunities!
+                        </p>
+            </div>
+                    <div class="social-linksend2" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="300">
+                    <a href="https://github.com/22-rajeev"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/rajeev-joshi-bcs"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="mailto:rajeev22joshi@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            
             </div>
     
            <div class="contact-form">
@@ -174,11 +177,17 @@
             Made By Rajeev © 
         </div>
 
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
-          AOS.init({ offset: 0 });
-        </script>
-        <script src="script.js"></script> 
-        </body>
+              window.onload = function() {
+                AOS.init({
+                  offset: 100,
+                  duration: 1000,
+                  easing: 'ease-in-out',
+                  once: true
+                });
+              };
+</script>
+<script defer src="script.js"></script>
 </body>
 </html>
