@@ -1,73 +1,67 @@
 document.addEventListener("DOMContentLoaded", function () {
-    AOS.init({ offset: 0 });
+    AOS.init({
+        offset: 100, 
+        duration: 1000, 
+        once: true 
+    });
+});
 
-    function hamburg() {
-        const navbar = document.querySelector(".dropdown");
-        if (navbar) {
-            navbar.style.transform = "translateY(0px)";
-        }
+function hamburg() {
+    const navbar = document.querySelector(".dropdown");
+    navbar.style.transform = "translateY(0px)";
+}
+
+function cancel() {
+    const navbar = document.querySelector(".dropdown");
+    navbar.style.transform = "translateY(-500px)";
+}
+
+var typed = new Typed("#typing-text", {
+    strings: ["Python Developer", "ML Enthusiast", "Learner"],
+    typeSpeed: 100,
+    backSpeed: 50,
+    backDelay: 800,
+    loop: true
+});
+
+let lastScrollTop = 0;
+const logo = document.querySelector(".logo");
+
+window.addEventListener("scroll", function () {
+    let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+        // Scrolling down
+        logo.style.opacity = "0";
+        logo.style.pointerEvents = "none"; // Prevents interaction
+    } else {
+        // Scrolling up
+        logo.style.opacity = "1";
+        logo.style.pointerEvents = "auto";
     }
+    lastScrollTop = scrollTop;
+});
 
-    function cancel() {
-        const navbar = document.querySelector(".dropdown");
-        if (navbar) {
-            navbar.style.transform = "translateY(-500px)";
-        }
-    }
+document.getElementById("contactForm").addEventListener("submit", async function(event) {
+    event.preventDefault(); 
 
-    const typingText = document.querySelector("#typing-text");
-    if (typingText) {
-        new Typed("#typing-text", {
-            strings: ["Python Developer", "ML Enthusiast", "Learner"],
-            typeSpeed: 100,
-            backSpeed: 50,
-            backDelay: 800,
-            loop: true
-        });
-    }
+    let formData = new FormData(this);
 
-    let lastScrollTop = 0;
-    const logo = document.querySelector(".logo");
-    if (logo) {
-        window.addEventListener("scroll", function () {
-            let scrollTop = window.scrollY || document.documentElement.scrollTop;
-            
-            logo.style.opacity = scrollTop > lastScrollTop ? "0" : "1";
-            logo.style.pointerEvents = scrollTop > lastScrollTop ? "none" : "auto";
-            
-            lastScrollTop = scrollTop;
-        });
-    }
+    let response = await fetch(this.action, {
+        method: "POST",
+        body: formData
+    });
 
-    // Contact Form Submission
-    const contactForm = document.getElementById("contactForm");
-    if (contactForm) {
-        contactForm.addEventListener("submit", async function (event) {
-            event.preventDefault();
+    let result = await response.json();
 
-            let formData = new FormData(this);
+    if (result.success) {
+        let successMessage = document.getElementById("successMessage");
+        successMessage.style.display = "block"; 
 
-            try {
-                let response = await fetch(this.action, {
-                    method: "POST",
-                    body: formData
-                });
+        this.reset(); 
 
-                let result = await response.json();
-
-                if (result.success) {
-                    let successMessage = document.getElementById("successMessage");
-                    if (successMessage) {
-                        successMessage.style.display = "block";
-                        this.reset();
-                        setTimeout(() => {
-                            successMessage.style.display = "none";
-                        }, 3000);
-                    }
-                }
-            } catch (error) {
-                console.error("Error submitting form:", error);
-            }
-        });
+        setTimeout(() => {
+            successMessage.style.display = "none"; 
+        }, 3000);
     }
 });
