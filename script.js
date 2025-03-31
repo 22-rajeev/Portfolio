@@ -7,7 +7,6 @@ function cancel() {
     const navbar = document.querySelector(".dropdown");
     navbar.style.transform = "translateY(-500px)";
 }
-
 var typed = new Typed("#typing-text", {
     strings: ["Python Developer", "ML Enthusiast", "Learner"],
     typeSpeed: 100,
